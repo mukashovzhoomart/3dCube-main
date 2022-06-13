@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cube</title>
+</head>
+<body>
+    <!-- START -->
+
+        <div class="header">
+            <div class="container">  
+                <div id="options">
+
+                   
+                    <div class="custom-select">
+                        <select data-select="1">
+                            <option value="0" data-index="0">Квадрат</option>
+                            <option value="1" data-index="0">Квадрат</option>
+                            <option value="3" data-index="2">Прямоугольник</option>
+                            <option value="2" data-index="1">Паралеллограм</option>
+                        </select>
+                    </div>
+                   
+
+                    <div class="tools tools--2d">
+                        <div class="model">
+                            <div class="button" id="button-1">
+                                <input type="checkbox" class="checkbox">
+                                <div class="knobs"></div>
+                                <div class="layer"></div>
+                            </div>
+                        </div>
+
+                        <div class="scale">
+                            <button class="scale__decrease button left"></button>
+                            <button class="scale__increase button right"></button>
+                        </div>
+
+                        <div class="picker">
+                            <button class="palette button left  fas fa-palette"></button>
+                            <button class="decorate button right fas fa-quidditch"></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="figure">
+            <div class="form square__2d">
+                <div class="wrapper">
+                    <div class="cube">
+                        <div class="side front">front</div>
+                        <div class="side back">back</div>
+                        <div class="side right">right</div>
+                        <div class="side left">left</div>
+                        <div class="side top">top</div>
+                        <div class="side bottom">bottom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="colors">
+
+            <span class="arrow"></span>
+            <h2 class="mb-2">Цвета</h2>
+
+            <div class="flex align-center justify-center">
+                <ul class="labels mr-2">
+                    <li>Передний</li>
+                    <li>Задний</li>
+                    <li>Левый</li>
+                    <li>Правый</li>
+                    <li>Верхний</li>
+                    <li>Нижный</li>
+                </ul>
+
+                <ul class="values">
+
+                    <li class="flex">
+                        <input type="text" class="front"           maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                    <li class="flex">
+                        <input type="text" class="back"   disabled maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                    <li class="flex">
+                        <input type="text" class="left"   disabled maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                    <li class="flex">
+                        <input type="text" class="right"  disabled maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                    <li class="flex">
+                        <input type="text" class="top"    disabled maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                    <li class="flex">
+                        <input type="text" class="bottom" disabled maxlength="9">
+                        <div class="ml-1 pl-3 border-2 border-light colorBlock"></div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <button class="mt-2 btn-default bg-light" id="getCurrentColors">Показать текущая цвета Фигуры</button>
+
+            <div class="mt-2 figure-options">
+                <h2> Параметры (3D)</h2>
+
+                <div class="flex align-center mt-1">
+                    <label for="">Показать невидные части</label>
+
+                    <div class="backface ml-2">
+                        <div class="button" id="button-2">
+                            <input type="checkbox" class="checkbox" checked>
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex align-center mt-1">
+                    <label for="">Показать надписи каждых сторон</label>
+
+                    <div class="side-labels ml-2">
+                        <div class="button" id="button-3">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex align-center mt-1">
+                    <label for="">Свободный обзор с помощью мыши</label>
+
+                    <div class="free-view ml-2">
+                        <div class="button" id="button-4">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+           
+
+        </div>
+
+    <!-- END -->
+    <script src="vanilla-picker.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
